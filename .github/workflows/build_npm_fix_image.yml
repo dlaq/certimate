@@ -35,8 +35,8 @@ jobs:
       - name: 登录 Docker Hub
         uses: docker/login-action@v3
         with:
-          username: dlaq
-          password: ${{ secrets.KEY }}
+          username: ${{ vars.DOCKERHUB_USERNAME || vars.DOCKERHUB || 'dlaq' }}
+          password: ${{ secrets.KEY || vars.KEY }}
 
       - name: 构建并推送镜像
         uses: docker/build-push-action@v6
