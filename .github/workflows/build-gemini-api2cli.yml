@@ -8,6 +8,7 @@ on:
       - ".github/workflows/build-gemini-api2cli.yml"
   workflow_dispatch:
 
+# Uses Docker Hub credentials already stored in this repository.
 jobs:
   publish:
     uses: dlaq/gemini-api2cli/.github/workflows/docker-publish.yml@main
