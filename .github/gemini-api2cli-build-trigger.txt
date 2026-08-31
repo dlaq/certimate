@@ -1,0 +1,1 @@
+trigger gemini-api2cli docker build
