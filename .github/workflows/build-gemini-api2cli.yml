@@ -3,9 +3,7 @@ name: Publish gemini-api2cli Docker image
 on:
   push:
     branches:
-      - main
-    paths:
-      - ".github/workflows/build-gemini-api2cli.yml"
+      - gemini-api2cli-build-trigger
   workflow_dispatch:
 
 # Uses Docker Hub credentials already stored in this repository.
