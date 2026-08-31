@@ -1,0 +1,16 @@
+name: Publish gemini-api2cli Docker image
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/build-gemini-api2cli.yml"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    uses: dlaq/gemini-api2cli/.github/workflows/docker-publish.yml@main
+    secrets:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
